@@ -96,6 +96,7 @@ details {
 }
 summary {
   margin: 1rem 0;
+  cursor: pointer;
 }
 sub,
 sup {
@@ -126,7 +127,8 @@ ol {
 }
 li,
 li p {
-  margin-bottom: 0.125rem;
+  margin: 0 0 0.125rem;
+  line-height: 1.25;
 }
 ol li,
 ul li {
