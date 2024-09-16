@@ -14,6 +14,7 @@ export default function Meta({
   path?: string;
 }) {
   const title = page ? `${page} • ${siteName}` : siteName;
+  const trailingSlash = path ? "/" : "";
   return (
     <>
       <title>{title}</title>
@@ -23,12 +24,12 @@ export default function Meta({
         content="Dave, David, Hartsough, notes, thoughts, thinking, document, writing, note"
       />
       <meta name="author" content="David Hartsough" />
-      <link rel="canonical" href={`${url}${path}`} />
+      <link rel="canonical" href={`${url}${path}${trailingSlash}`} />
       <meta name="application-name" content={siteName} />
       <meta property="og:type" content={path ? "article" : "website"} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={`${url}${path}`} />
+      <meta property="og:url" content={`${url}${path}${trailingSlash}`} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:image" content={`${baseUrl}icon.png`} />
