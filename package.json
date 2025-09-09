@@ -20,6 +20,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@mdx-js/react": "^2.3.0",
     "gatsby": "^5.15.0",
     "gatsby-plugin-catch-links": "^5.15.0",
     "gatsby-plugin-mdx": "^5.15.0",
@@ -29,16 +30,23 @@
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-source-filesystem": "^5.15.0",
     "gatsby-transformer-remark": "^6.15.0",
+    "postcss": "^8.5.6",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@mdx-js/react": "^2.3.0",
-    "postcss": "^8.5.6"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@eslint/css": "^0.11.0",
+    "@eslint/js": "^9.35.0",
+    "@eslint/markdown": "^7.2.0",
     "@types/node": "^24.3.1",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
+    "eslint": "^9.35.0",
+    "eslint-plugin-react": "^7.37.5",
     "gh-pages": "^6.3.0",
-    "typescript": "^5.9.2"
+    "globals": "^16.3.0",
+    "jiti": "^2.5.1",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.43.0"
   }
 }
