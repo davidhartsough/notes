@@ -1,0 +1,280 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.15.0"/><meta name="description" content="What are the actual implications of Determinism? Let&#x27;s explore the most common points of confusion and conflation." data-gatsby-head="true"/><meta name="keywords" content="Dave, David, Hartsough, notes, thoughts, thinking, document, writing, note" data-gatsby-head="true"/><meta name="author" content="David Hartsough" data-gatsby-head="true"/><meta name="application-name" content="Dave&#x27;s Notes" data-gatsby-head="true"/><meta property="og:type" content="article" data-gatsby-head="true"/><meta property="og:title" content="2 Common Hangups With Determinism • Dave&#x27;s Notes" data-gatsby-head="true"/><meta property="og:description" content="What are the actual implications of Determinism? Let&#x27;s explore the most common points of confusion and conflation." data-gatsby-head="true"/><meta property="og:url" content="https://davidhartsough.com/notes/common-hangups-with-determinism/" data-gatsby-head="true"/><meta property="og:site_name" content="Dave&#x27;s Notes" data-gatsby-head="true"/><meta property="og:locale" content="en_US" data-gatsby-head="true"/><meta property="og:image" content="https://davidhartsough.com/icon.png" data-gatsby-head="true"/><meta property="og:image:alt" content="Dave&#x27;s logo icon" data-gatsby-head="true"/><meta property="og:image:type" content="image/png" data-gatsby-head="true"/><meta property="og:image:width" content="512" data-gatsby-head="true"/><meta property="og:image:height" content="512" data-gatsby-head="true"/><meta name="twitter:card" content="summary" data-gatsby-head="true"/><meta name="twitter:title" content="2 Common Hangups With Determinism • Dave&#x27;s Notes" data-gatsby-head="true"/><meta name="twitter:description" content="What are the actual implications of Determinism? Let&#x27;s explore the most common points of confusion and conflation." data-gatsby-head="true"/><meta name="twitter:image" content="https://davidhartsough.com/notes/icon.png" data-gatsby-head="true"/><meta name="twitter:image:alt" content="Dave&#x27;s logo icon" data-gatsby-head="true"/><meta name="twitter:image:type" content="image/png" data-gatsby-head="true"/><meta name="twitter:image:width" content="512" data-gatsby-head="true"/><meta name="twitter:image:height" content="512" data-gatsby-head="true"/><style data-href="/notes/styles.115e13e11e1bbdfd1ca4.css" data-identity="gatsby-global-css">:root{--bg-color:#fcfcfd;--border-color:#c4c4c4;--font-color:#17191c;--link-color:#04c}@media (prefers-color-scheme:dark){:root{--bg-color:#141415;--border-color:#7a7f85;--font-color:#f4f5f5;--link-color:#0fd}}*,:after,:before{border-color:var(--border-color);box-sizing:border-box}html{-webkit-text-size-adjust:100%;font-feature-settings:normal;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-variation-settings:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{background-color:var(--bg-color);color:var(--font-color);line-height:inherit;margin:0}main{margin:0 auto;max-width:48rem;padding:1rem 1rem 4rem}p{margin:.5rem 0 1rem}h1,h2{font-weight:300;line-height:1.25}h3,h4,h5,h6{font-weight:500;line-height:1.25;margin:.5rem 0 1rem}h1{font-size:2.5rem;margin:1.5rem 0}h2{font-size:2rem;margin:1.5rem 0 1.25rem}h3{font-size:1.5rem}h4{font-size:1.25rem}h5,h6{font-size:1.125rem}a{color:var(--link-color);text-decoration:none}a:focus,a:hover{text-decoration:underline}blockquote{margin:0 1.5rem 1.5rem;padding:0}blockquote p{margin-bottom:.5rem}details{border-bottom:1px dotted;margin:1rem 0 2rem}summary{cursor:pointer;margin:1rem 0}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}b,strong{font-weight:bolder}small{font-size:80%}ol,ul{list-style-image:none;list-style-position:outside;margin:.5rem 0 1.5rem 1.5rem;padding:0}li,li p{line-height:1.25;margin:0 0 .125rem}ol li,ul li{padding-left:0}ol ol,ol ul,ul ol,ul ul{margin:0}li>ol,li>ul{margin:0 0 .125rem 1.5rem}hr{border-top:1px solid var(--border-color);color:inherit;height:0;margin:2rem 0}audio,img,svg,video{display:block;margin:1rem 0}audio{width:100%}img,video{height:auto;max-width:100%}table{border-collapse:collapse;border-color:inherit;font-size:1rem;line-height:1.5rem;margin-bottom:3rem;text-indent:0;width:100%}td,th,thead{text-align:left}td,th{padding:.75rem 1rem}td:first-child,th:first-child{padding-left:0}td:last-child,th:last-child{padding-right:0}th{font-weight:700}td,th{border-bottom:1px solid var(--border-color)}a.anchor.before{top:calc(50% - .5rem)}.anchor.before svg{fill:var(--font-color);margin:0}</style><link rel="sitemap" type="application/xml" href="/notes/sitemap-index.xml"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-gatsby-head="true">2 Common Hangups With Determinism • Dave&#x27;s Notes</title><link rel="canonical" href="https://davidhartsough.com/notes/common-hangups-with-determinism/" data-gatsby-head="true"/><link rel="icon" href="https://davidhartsough.com/favicon.ico" type="image/x-icon" sizes="any" data-gatsby-head="true"/><link rel="icon" href="https://davidhartsough.com/favicon-16x16.png" type="image/png" sizes="16x16" data-gatsby-head="true"/><link rel="icon" href="https://davidhartsough.com/favicon-32x32.png" type="image/png" sizes="32x32" data-gatsby-head="true"/><link rel="icon" href="https://davidhartsough.com/icon192.png" type="image/png" sizes="192x192" data-gatsby-head="true"/><link rel="apple-touch-icon" href="https://davidhartsough.com/apple-touch-icon.png" type="image/png" sizes="180x180" data-gatsby-head="true"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><main><nav><a href="https://davidhartsough.com/">Dave</a> / <a href="/notes/">Notes</a> / <a aria-current="page" class="" href="/notes/common-hangups-with-determinism/">2 Common Hangups With Determinism</a></nav><section><h1>2 Common Hangups With Determinism</h1><p><em><small>September 1, 2025</small></em></p><p>The way that Robert Sapolsky (<em>&quot;Behave&quot;</em> and <em>&quot;Determined&quot;</em>) and Sam Harris (<em>&quot;Free Will&quot;</em>, etc) discuss <strong>Determinism</strong> can be really difficult for people (myself included) to understand.</p>
+<p>Here&#x27;s an overly simple definition:</p>
+<p><strong>Determinism</strong> says that: everything arises from prior causes.</p>
+<p>Q: Why did something happen?</p>
+<p>A: Something happened because things that preceded it caused it to happen.</p>
+<p>Q: And why did those prior circumstances occur?</p>
+<p>A: Because things that preceded them caused them to happen.</p>
+<p>… Etc., etc. 🐢 All the way down.</p>
+<p>So when it comes to you and your behaviors and others and their behaviors, Robert Sapolsky might say:</p>
+<ul>
+<li>Every bit of behavior has multiple levels of causality — prior causes from a millisecond before to a hundred million years before, and everything in between.</li>
+<li>All of our behaviors are the products of our biological and environmental interactions. We are the cumulative biological and environmental happenings of the past.</li>
+<li>Everything <strong>happens</strong> because of preceding <strong>happenings</strong>.</li>
+<li>Everything is <strong>caused</strong> by preceding <strong>causes</strong>.</li>
+</ul>
+<p>When grappling with these ideas, I think most people struggle with comprehending what the actual implications of this are. What does Determinism truly entail?</p>
+<p>I think this is where most people get caught in two common hangups.</p>
+<h2 id="hangup-1-confusion" style="position:relative"><a href="#hangup-1-confusion" aria-label="hangup 1 confusion permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Hangup #1: Confusion</h2>
+<p>The first is: &quot;K. But wait. If my life and everything I do is just determined by prior causes, then what&#x27;s up with my moment-to-moment conscious experiences? It feels like I have agency, control, and the capacity to choose and change.&quot;</p>
+<p>So Hangup #1 asks: &quot;What about change, control, choice, and agency?&quot;</p>
+<p>There&#x27;s a big confusion between what you experience (your conscious internal experience) and what you think you should expect to experience if determinism were true.</p>
+<p>Consider this quote:</p>
+<blockquote>
+<p><em>&quot;Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and freedom.&quot;</em> — Victor Frankl</p>
+</blockquote>
+<p>Every time we pause and actually catch ourselves before we do that stupid thing we always regret doing, we have a profound sense of freedom and agency.</p>
+<p>This makes most of us ask: &quot;Well, is that &#x27;free will&#x27;?&quot;</p>
+<p>From this point of view, most people find Sam Harris to be a confusing contradiction; on one hand, he writes a book on how there&#x27;s no <em>Free Will</em>, and on the other hand, he makes an app about <em>&quot;Waking Up&quot;</em>. Sam Harris is a large proponent of the Buddhist practices of training the mind, especially through his <em>&quot;Waking Up&quot;</em> app. It&#x27;s full of content stemming from traditions like Vipassana, which teaches that: one can break free from seemingly inevitable bad habits of behaviors and reactions by <em>mindfully being aware</em> and <em>objectively observing</em> the originating sensations associated with the pattern of behavior to not <em>identify</em> with them or get trapped in their cycle. This kind of &quot;agency&quot; seems, at a glance, counterintuitive to determinism. And yet Harris actively encourages exactly such training of the mind.</p>
+<h3 id="clarifying-the-confusion" style="position:relative"><a href="#clarifying-the-confusion" aria-label="clarifying the confusion permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Clarifying the Confusion</h3>
+<p>&quot;Is determinism compatible with Victor Frankl&#x27;s quote? Is it compatible with our everyday experiences of change, control, choice, agency, (… decision, effort, influence, evaluation, deliberation, intention, motivation, development, growth, etc., etc.)? Is it compatible with mindfulness breaking behavior patterns?&quot;</p>
+<p>Yes.</p>
+<p>&quot;But doesn&#x27;t determinism mean that people don&#x27;t change? That things don&#x27;t change? Or that we can&#x27;t change things? And that we can&#x27;t control anything? So we don&#x27;t really make choices? Does it just mean that whatever happens is bound to happen and inevitable, regardless of what we do? Doesn&#x27;t it mean that we don&#x27;t really have the ability to deliberate or evaluate options of behaviors? Doesn&#x27;t it mean that we don&#x27;t really have agency or choices to make in life or in any given moment?&quot;</p>
+<p>No.</p>
+<p>There&#x27;s no contradiction between determinism and change, choices, decisions, agency, effort, influence, training, deliberation, or even the &quot;growth and freedom&quot; that Frankl describes in the &quot;space between stimulus and response&quot;.</p>
+<p>To explain, we&#x27;ll need to break down the terms we&#x27;re using and the implications.</p>
+<h3 id="breaking-down-the-terms" style="position:relative"><a href="#breaking-down-the-terms" aria-label="breaking down the terms permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Breaking down the terms</h3>
+<p>What is this &quot;freedom&quot; that Victor Frankl refers to? And how is it different from &quot;free will&quot;?</p>
+<p>What is &quot;change&quot;? What are &quot;choices&quot;? What do we mean when we say we &quot;made a decision&quot; or &quot;have agency&quot; or &quot;changed something&quot; or &quot;changed ourselves&quot; or &quot;influenced someone&quot; or &quot;trained&quot; or &quot;set intentions&quot; or &quot;have self-development/growth&quot;?</p>
+<h4 id="quick-glossarydictionary" style="position:relative"><a href="#quick-glossarydictionary" aria-label="quick glossarydictionary permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Quick glossary/dictionary:</h4>
+<p><strong>Change</strong> just refers to any and all &quot;transformations&quot; that occur through natural processes. Change happens when sufficient causal forces accumulate to shift a system from one state to another. For example: neural plasticity, habit formation, and skill development are all deterministic change processes.</p>
+<p><strong>Agency</strong> is the capacity of a complex system (like a human brain) to process information, evaluate options, model future states, and generate responses that can causally affect future outcomes. Your brain is an &quot;agent&quot; because it can model possible futures, weigh outcomes, and produce behaviors that shape what happens next. Agency emerges from complex deterministic processes, not despite them.</p>
+<p><strong>Choice</strong> is the neurological process where competing response patterns are evaluated and one emerges as the &quot;winner.&quot; When you &quot;choose,&quot; your brain is running simulations, accessing memories, applying values, and integrating all this information until one option becomes &quot;dominant&quot;. The choice feels &quot;free&quot; because you experience the deliberation process, but the outcome emerges from the interplay of all relevant factors in that moment.</p>
+<p><strong>Control</strong> is the ability of your current brain state to causally affect future states through your actions. You have &quot;control&quot; when your trained responses can successfully compete with automatic patterns or when your planning and goal-setting can organize your behavior over time. Control isn&#x27;t about somehow bypassing causation; it&#x27;s about becoming a more effective cause in your own life.</p>
+<p>A big component of these common confusions can probably be resolved by just finding better terms.</p>
+<div><details><summary><strong>New Norms?</strong></summary><p><p>(Just for fun) Imagine a world where society is built on the consensus of
+determinism.</p></p><p>How might they rephrase our everyday speech?</p><p>Let&#x27;s start with how we usual say things:</p><ul><li>&quot;I <strong>chose</strong> [it/that/this, to (do it/that/this)].&quot;</li><li><p>&quot;I <strong>always choose</strong> [it/that/this, to (do it/that/this)].&quot;</p></li><li>&quot;You can <strong>choose</strong> not to [do it].&quot;</li><li><p>&quot;You <strong>choose</strong> [your response] (in the space between
+stimulus and response).&quot;</p></li><li><p>&quot;I&#x27;m still learning to <strong>control</strong> [it/that/this, myself, my
+anger, the addiction, etc].&quot;</p></li><li>&quot;You&#x27;re a good <strong>influence</strong> on [it/that/this, them].&quot;</li><li>&quot;You&#x27;ll <strong>influence</strong> the outcome [of it/that/this].&quot;</li><li>&quot;I <strong>decided</strong> to [do it/that].&quot;</li><li>&quot;I am <strong>changing</strong> [it/that].&quot;</li><li>&quot;I am <strong>controlling</strong> [it].&quot;</li><li><p>&quot;I have the <strong>choice</strong> to [do it/that/this, be that way].&quot;</p></li><li><p>&quot;You <strong>controlled</strong> [it/that/this, yourself, your (temper,
+anxiety, tone)].&quot;</p></li><li>&quot;I&#x27;ll <strong>make a decision</strong> [about it/that].&quot;</li><li><p>&quot;I <strong>deliberately intended</strong> to [do it/that, be that way].&quot;</p></li><li>&quot;I&#x27;ve <strong>grown</strong> a lot this year!&quot;</li><li>&quot;That&#x27;s a perfect demonstration of your <strong>growth</strong>.&quot;</li></ul><p><p>Examples of things you might &quot;pick&quot;: a new major/degree, the table in the
+back, to propose to her, the matte black color, that word, this candidate,
+to tell them, to buy this house, to quit my job, to be kind, to say
+something, to help, etc.</p></p><p><p>Examples of things you might &quot;alter&quot;: your habits, routines, values,
+beliefs, narratives, emotions, instincts, behavior, environment, etc.</p></p><h4>New Lingo</h4><p><small><p><strong>Note:</strong> I gave Claude this challenge. Here&#x27;s what it came up with. (This is the only section written by an LLM-AI. ... Honestly, not too bad, but I&#x27;ll probably still rewrite this at some point.)</p></small></p><p><p>Here&#x27;s how a determinism-informed society might rephrase these expressions
+to be more causally accurate:</p></p><p><strong>Choice/Decision Language:</strong></p><ul><li>&quot;A <strong>preference emerged</strong> for [it/that/this].&quot;</li><li>&quot;This <strong>pattern consistently arises</strong> in me.&quot;</li><li><p>&quot;The conditions exist for a different
+<strong>response to emerge</strong>.&quot;</p></li><li><p>&quot;A <strong>response can arise</strong> in the space between stimulus and
+automatic reaction.&quot;</p></li></ul><p><strong>Control Language:</strong></p><ul><li><p>&quot;I&#x27;m <strong>developing capacity</strong> to influence [my anger/the
+addiction].&quot;</p></li><li><p>&quot;The <strong>training is working</strong>; new patterns are forming.&quot;</p></li><li><p>&quot;Your presence <strong>creates conditions</strong> where [they] tend
+toward better outcomes.&quot;</p></li><li><p>&quot;Your actions will be <strong>part of the causal web</strong> that shapes
+the outcome.&quot;</p></li></ul><p><strong>Change/Growth Language:</strong></p><ul><li>&quot;<strong>New patterns have formed</strong> in me this year.&quot;</li><li><p>&quot;Your <strong>neural pathways have reorganized</strong> in beneficial
+ways.&quot;</p></li><li>&quot;I&#x27;m <strong>becoming the kind of person</strong> who does [that].&quot;</li><li>&quot;<strong>Different responses are now available</strong> to me.&quot;</li></ul><p><strong>Intention/Planning Language:</strong></p><ul><li>&quot;I <strong>set conditions</strong> for [that outcome] to emerge.&quot;</li><li>&quot;I <strong>oriented myself</strong> toward [that goal].&quot;</li><li><p>&quot;The <strong>planning process activated</strong> pathways that led to
+[that result].&quot;</p></li><li><p>&quot;I <strong>aligned my environment</strong> to support [that behavior].&quot;</p></li></ul><p><strong>Selection Language:</strong></p><ul><li><p>&quot;The matte black <strong>felt most compelling</strong> given my current
+aesthetic preferences.&quot;</p></li><li>&quot;All factors <strong>converged</strong> toward proposing to her.&quot;</li><li>&quot;The back table <strong>emerged as optimal</strong> for our needs.&quot;</li><li>&quot;That word <strong>arose</strong> as the most precise expression.&quot;</li></ul><p><strong>Influence Language:</strong></p><ul><li><p>&quot;You <strong>create conditions</strong> that tend to bring out people&#x27;s
+better qualities.&quot;</p></li><li><p>&quot;Your <strong>presence shifts the dynamics</strong> toward more positive
+outcomes.&quot;</p></li><li>&quot;You&#x27;re <strong>part of what enables</strong> their growth.&quot;</li></ul><p><small>Ok. Back to our regularly scheduled program.</small></p></details></div>
+<h4 id="breaking-down-the-processes" style="position:relative"><a href="#breaking-down-the-processes" aria-label="breaking down the processes permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Breaking down the processes</h4>
+<p>Let&#x27;s take a quick overview of what actually happens in your brain in &quot;the space between stimulus and response&quot; where &quot;your growth, freedom, and power to choose lie.&quot; When your brain &quot;deliberates&quot;, &quot;evaluates options&quot;, and &quot;makes a choice/decision&quot;, here&#x27;s what&#x27;s actually happening:</p>
+<ul>
+<li>Once the &quot;stimulus&quot; arrives, multiple neural networks activate simultaneously, and each network represents a different possible response.</li>
+<li>These networks &quot;compete&quot; based on factors like: emotional salience, past outcomes, current goals, values, narratives, priorities, etc.</li>
+<li>The competition is mediated by more factors, including: neurotransmitter levels, stress hormones, and available glucose.</li>
+<li>One pattern eventually &quot;dominates&quot; with the strongest combined &quot;signal&quot;.</li>
+<li>You experience this as &quot;deciding&quot;, but it&#x27;s more like watching the winner of a neural tournament.</li>
+</ul>
+<p>You don&#x27;t consciously control most of this process. The deliberation feels like &quot;yours&quot; because you experience it from the inside, but it&#x27;s happening <strong><em>to</em></strong> you as much as <strong><em>by</em></strong> you.</p>
+<p>But this is still pretty technical. Let&#x27;s explore a more practical example and examine how mindfulness meditation works:</p>
+<p>When you practice observing thoughts without identification, you&#x27;re literally rewiring neural pathways. The practice creates new causal chains that can interrupt old habitual patterns. You&#x27;re not &quot;freely choosing&quot; to break conditioning - you&#x27;re creating conditions where old patterns naturally lose their grip.</p>
+<p>&quot;Aha!&quot; you say, &quot;But wait! Is the fact that I can rewire my neural pathways evidence of free will? Aren&#x27;t I freely and quite intentionally/deliberately choosing to create the conditions where my old habits start to die?&quot;</p>
+<p>And let&#x27;s say we even draw the analogy of practicing and training the mind as a skillfulness akin to strengthening the muscles. We might then say, &quot;Wait! Isn&#x27;t the act of strengthening a muscle an act of free will?&quot;</p>
+<p>Perhaps the most compelling aspect of this is the feeling of agency. &quot;It&#x27;s clear and indisputable!&quot; You can decide &quot;I&#x27;m going to train and practice [____]&quot;, then go do exactly that, and then finally see the end result of changed outcomes that never would have happened had you never &quot;resolved&quot; to set the intentions and follow through with the process. It gives you such a strong sense of being in control of one&#x27;s own life!</p>
+<p>When you say, &quot;I&#x27;m going to start meditating!&quot;, and then successfully practice for months, it really feels like free will in action.</p>
+<p>But let&#x27;s trace it backwards:</p>
+<p>What caused that resolution to arise in the first place?</p>
+<p>Everyone has their own &quot;reasons&quot; for why they started mindfulness meditation practice. You might cite things like: &quot;I hit a breaking point&quot;, &quot;I read a book&quot;, &quot;I got a recommendation from a trusted friend&quot;, etc.</p>
+<p>When you closely examine the chain of events, you&#x27;ll see that the &quot;decision&quot; to change emerged from a complex web of prior causes. No one freely &quot;generates&quot; the motivation from nothing; it arises when conditions are ripe.</p>
+<p>For example, &quot;How did I meet that trusted friend? Why did she recommend that book? Why did I read it?&quot; If you look far enough back, it quickly becomes lost in the murky waters of, well, just &quot;prior causes&quot;.</p>
+<p>&quot;But the change is so palpable! It really feels like I had the agency to freely choose this path, which is frankly confusing because I don&#x27;t understand why others don&#x27;t also choose this path.&quot; Great points!</p>
+<p>Why do large shifts and transformations in life feel like free will?</p>
+<p>Once someone starts a practice, early successes create positive feedback loops. Small improvements generate motivation for continued practice, which creates more improvements, which generates more motivation. This upward spiral can become self-sustaining. But the initial conditions that allowed the spiral to start weren&#x27;t freely chosen; instead we find that they emerged from the person&#x27;s history, current circumstances, and the specific confluence of factors in their life at that moment.</p>
+<p>And quick aside, back to your question about the puzzle of: &quot;Why doesn&#x27;t everybody follow this path?&quot; &quot;Can&#x27;t we all just decide to change?&quot; ... If willpower were truly free, then everyone could simply decide to meditate daily, exercise regularly, and stop bad habits. (There&#x27;d be no disconnect between what you want to do and what you actually do. Why start any bad habit in the first place? Why do anything bad, ever?) The fact that these things are difficult and that people struggle with them despite genuinely wanting to change reveals that something more complex is happening. The person who successfully transforms their life had the right combination of things like:</p>
+<ul>
+<li>Sufficient baseline executive function,</li>
+<li>Low enough current stress,</li>
+<li>Access to effective methods,</li>
+<li>Supportive environment,</li>
+<li>Timing that aligned with their psychological readiness,</li>
+<li>Perhaps some early positive experiences that reinforced the effort,</li>
+<li>And so on.</li>
+</ul>
+<p>The profound sense of being in control of your life comes from experiencing your trained responses successfully competing with old patterns. You&#x27;re not controlling the process from some elevated position; you actually <em>are</em> the process. The &quot;you&quot; that feels in control is the emergent result of all these neural networks working together.</p>
+<h3 id="on-space-and-freedom" style="position:relative"><a href="#on-space-and-freedom" aria-label="on space and freedom permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>On &quot;space&quot; and &quot;freedom&quot;</h3>
+<p>Let&#x27;s revisit Frankl&#x27;s analogy of a &quot;space&quot; and a &quot;freedom&quot;:</p>
+<p>The &quot;space&quot; between stimulus and response is phenomenologically accurate, because there really is a moment where multiple response patterns compete, and training truly can expand that space. But from a deterministic perspective, what&#x27;s happening in that space isn&#x27;t a freely willing &quot;self&quot; making choices — it&#x27;s competing neural networks, with the &quot;winner&quot; determined by a multitude of factors, such as:</p>
+<ul>
+<li>How much have you strengthened mindfulness circuits through practice?</li>
+<li>What are your current stress levels and available cognitive resources?</li>
+<li>How strong are the old habitual patterns vs your newly trained responses?</li>
+<li>What are the influential environmental cues and social contexts in the moment?</li>
+</ul>
+<p>Concrete examples: Sleepy? Long day? Hungry? Running late? Just ate a giant pasta? Taking the dog to the vet? On the phone with your dad?</p>
+<p>(For a glance at a much larger set of relevant factors, consider: neurons, neural activity, thoughts, memories, emotions, sensory stimuli, neurochemicals, hormones, experiences, environment, socialization, acculturation, the nervous system, the brain, each brain system, the construction of each brain region [esp the frontal cortex], neural plasticity, epigenetics, gene-environment interactions, childhood experiences, family upbringing, family socioeconomic status, the prenatal/fetal environment, inherited genes, societal values, ancestral culture, ecology, evolution, the amount of time that has past since I last ate a bowl of cereal, … the list goes on.)</p>
+<p>&quot;So wait, that&#x27;s &#x27;agency&#x27;, right? And this kind of &#x27;agency&#x27; is just &#x27;training&#x27;?&quot;</p>
+<p>Yes.</p>
+<p>The profound sense of freedom you feel when you catch yourself in that &quot;space&quot; isn&#x27;t evidence of free will; instead, it&#x27;s actually evidence that the training worked. You&#x27;ve literally built new neural pathways that can now compete with old ones. The &quot;choice&quot; emerges from this competition between brain systems, with mindfulness training having strengthened the circuits that can recognize and interrupt automatic patterns.</p>
+<p>It&#x27;s like strengthening a muscle. You don&#x27;t &quot;freely will&quot; your bicep to be stronger, but consistent training deterministically creates the conditions where it can overpower resistance that used to defeat it.</p>
+<p>&quot;But why does it <em>feel</em> like freedom?&quot;</p>
+<p>Great question. (Why does the radio kicking on your fave song of the summer right when you take your first bite of guac on a Taco Tuesday feel like 100mg of Molly? Haha, just kidding. Not relevant.)</p>
+<p>The experience feels profoundly free because:</p>
+<ol>
+<li>You&#x27;re no longer trapped in the automatic pattern.</li>
+<li>You have access to a wider range of responses.</li>
+<li>There&#x27;s conscious awareness of the process happening.</li>
+</ol>
+<p>But this &quot;freedom&quot; is really freedom <em>from</em> previous conditioning, made possible by new conditioning. It&#x27;s the deterministic result of practice creating new causal possibilities.</p>
+<p>So when you pause before reacting poorly, what&#x27;s really happening is that months or years of mindfulness practice have created neural conditions where awareness can arise before the old pattern fully activates. The pause isn&#x27;t you exercising &quot;free will&quot;; it&#x27;s the deterministic fruit of all that training finally being strong enough to compete with old ingrained habits.</p>
+<h3 id="so-in-sum-" style="position:relative"><a href="#so-in-sum-" aria-label="so in sum  permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>So, in sum …</h3>
+<p>Understanding this explains why some interventions work and others don&#x27;t.</p>
+<p>True transformative change is possible through the process of understanding and leveraging the actual causal mechanisms of behavior.</p>
+<p>This perspective is actually more empowering because it suggests that with the right understanding and conditions, transformation is possible for more people!</p>
+<hr/>
+<p>Great! But maybe, even if you&#x27;ve resolved some of these confusions, you&#x27;re still iffy about the whole &quot;determinism&quot; thing, because, well… What else might it imply?</p>
+<h2 id="hangup-2-conflation" style="position:relative"><a href="#hangup-2-conflation" aria-label="hangup 2 conflation permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Hangup #2: Conflation</h2>
+<p>When wrestling with the implications of Determinism, many people get caught in the mire of:</p>
+<blockquote>
+<p>&quot;Huh. Well, then … Why bother — with anything?<br/>
+(For real…) Why bother? What&#x27;s the point? What matters?&quot;</p>
+</blockquote>
+<p>Well, let&#x27;s take a look at some of the points we&#x27;ve covered already:</p>
+<ul>
+<li>Your efforts matter tremendously. Practicing, training, and working toward goals genuinely changes outcomes.</li>
+<li>You can genuinely improve your life - through learning, therapy, practice, environmental changes, etc.</li>
+<li>A sense of personal responsibility matters. People should be held accountable for their actions in reasonable ways. (Like restorative/rehabilitative justice, for example.)</li>
+<li>Planning, decision-making, and deliberation are valuable. &quot;Thinking things through&quot; leads to better outcomes.</li>
+<li>Moral and ethical behavior matters. How you treat others has real consequences.</li>
+</ul>
+<p>Determinism does <em>not</em> undermine any of these truths.</p>
+<p>Yet you&#x27;ve probably heard (or thought) one of the following:</p>
+<ul>
+<li>&quot;That&#x27;s just the way things are and the way they always will be.&quot;</li>
+<li>&quot;That&#x27;s just the way I am. That&#x27;s just the way they are.&quot;</li>
+<li>&quot;That&#x27;s just how it is - always and forever!&quot;</li>
+<li>&quot;Eh, nothing you do changes anything.&quot;</li>
+<li>&quot;It doesn&#x27;t matter.&quot;</li>
+<li>&quot;You can&#x27;t control/change anything.&quot;</li>
+<li>&quot;People can&#x27;t/don&#x27;t change.&quot;</li>
+<li>&quot;If everything&#x27;s predetermined, you might as well give up and stop trying.&quot;</li>
+<li>&quot;Man makes plans. God laughs.&quot;</li>
+<li>&quot;Who cares?&quot;</li>
+<li>&quot;What&#x27;s the point?&quot;</li>
+<li>&quot;Why does it matter?&quot;</li>
+<li>&quot;We can&#x27;t do anything anyways.&quot;</li>
+<li>&quot;It&#x27;s just going to unfold however it unfolds.&quot;</li>
+<li>&quot;It&#x27;s all already decided, regardless of what you do.&quot;</li>
+<li>&quot;Just let everything happen as it was going to happen anyways.&quot;</li>
+<li>&quot;Nothing we do matters.&quot;</li>
+</ul>
+<p>I believe most people immediately conflate Determinism with:</p>
+<ul>
+<li><strong>Fatalism</strong> (your efforts are pointless)</li>
+<li><strong>Nihilism</strong> (nothing matters / makes a difference)</li>
+<li><strong>Futility</strong> (there&#x27;s no point in trying anything)</li>
+<li><strong>Fixed Destiny</strong> (the outcome is fixed regardless of what you do)</li>
+<li><strong>Passive Resignation</strong> (you might as well give up and let everything do what it was already going to do regardless)</li>
+</ul>
+<p>… etc.</p>
+<p>Just sit with these ideas for a moment and try to examine any possibilities of their truth.</p>
+<p>I think if you look closely, you&#x27;ll find they actually lack substance. They&#x27;re false beliefs that don&#x27;t accurately reflect reality.</p>
+<p>(Your brain literally rewires itself daily. Skills develop. Habits form and dissolve. Relationships evolve. People overcome addictions, learn new languages, develop emotional regulation, change careers, heal from trauma, build better relationships. The person you are today is different from who you were five years ago, and you&#x27;ll be different five years from now. Etc., etc., etc.)</p>
+<p>The odd thing is that we are very quick to assume that <strong>fatalism</strong>, <strong>nihilistic futility</strong>, and concepts of a <strong>fixed destiny</strong> are <em>synonymous</em> with Determinism.</p>
+<p>But this, too, is not true.</p>
+<h3 id="clarifying-the-conflation" style="position:relative"><a href="#clarifying-the-conflation" aria-label="clarifying the conflation permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Clarifying the Conflation</h3>
+<p>All Determinism says is that:</p>
+<ul>
+<li>Everything arises from prior causes.</li>
+<li>The universe is all cause and effect. There&#x27;s nothing else.</li>
+<li>Everything is interconnected.</li>
+<li>All things within the universe are changing.</li>
+<li>Change causes more change. Changes cause more changes.</li>
+<li>Every event has multiple levels of causality — prior causes from a millisecond before to a hundred million years before, and everything in between.</li>
+<li>Everything happens because of preceding happenings.</li>
+<li>Everything is caused by preceding causes.</li>
+<li>Each event causes other events — a ripple effect of cascading consequences.</li>
+<li>Each consequence in turn is one of the innumerable prior causal factors of future events.</li>
+<li>Things change constantly through natural (deterministic) processes.</li>
+<li>Everything is a dynamic system within systems.</li>
+</ul>
+<p>And so on and so forth.</p>
+<p>Determinism explains <strong><em>how</em></strong> change happens.</p>
+<p>It does not say that change <em>cannot</em> or <em>does not</em> happen.</p>
+<p>Similarly, the fact that change follows natural deterministic laws/processes doesn&#x27;t mean that change <em>cannot</em> or <em>does not</em> happen.</p>
+<br/>
+<p>So, again, any given outcome in question emerges from a massive multitude of causal factors.</p>
+<p>And you know what? Sometimes what <em>you</em> do is <em>one</em> of those causal factors.</p>
+<p>However, the total number of all causal factors involved in any given happening is (unfortunately) innumerable.</p>
+<p>(But we do know that &quot;free will&quot; is never a factor involved in anything.)</p>
+<p>Some causal factors have a greater or lesser effect.</p>
+<p>Sometimes you (your behaviors and the things happening in your brain) do in fact have quite a significant effect on happenings.</p>
+<p>Sometimes you are an active part of the causal chain that shapes your future (and the natural deterministic processes that shape the future more generally).</p>
+<p>Sometimes you&#x27;re factored into the equations. (Sometimes you&#x27;re an &quot;input&quot;.)</p>
+<p>So <strong>you matter</strong>. You have a role. You play a part. You are involved. You are included.</p>
+<p>In fact, for most things in your life, participation is mandatory. <br/>
+(You are never able to step outside reality into a place/state where the universe somehow unfolds completely independently of whatever you do.)</p>
+<br/>
+<p>Furthermore, what happens in the universe and in your life has real-world implications and consequences on conscious living beings (who are capable of suffering and flourishing).</p>
+<p>Again, this is why morality and ethics matter.</p>
+<p><strong>Everything you do matters.</strong></p>
+<p>How you spend your time, what you prioritize, what you value, what you pay attention to, what you believe, what you learn/understand, what you practice, how you connect (with others, yourself, and the world/things), how you interact with others — these are among the most powerful causal forces that shape your life and the lives of those around you.</p>
+<p>Just because we understand that these things also have innumerable prior causes doesn&#x27;t make them any less significant.</p>
+<p>So when the conflation of nihilistic fatalism comes knocking, don&#x27;t throw your hands up in the complexity of the deterministic systems of life.</p>
+<p>Yes, it is cognitively impossible to comprehend the complete causal chain of anything.</p>
+<p>But we can comprehend enough of the actual causal mechanisms of this deterministic system of life to <strong>cultivate positive change</strong>.</p>
+<p>(And I will go so far as to believe that this is our moral responsibility.)</p>
+<p>How are you spending your time? What are you prioritizing? What do you value most? What are you paying attention to? What do you believe? What do you understand? What are you learning? What are you practicing? How are you interacting and connecting with others, yourself, life, and the world?</p>
+<p>You are interconnected to everything. What do your connections look like?</p>
+<p>How will you strive to cultivate better, positive, healthy connections?</p></section></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/common-hangups-with-determinism/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-a19d5715adff57d8d24c.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-30f4929a1c741a526105.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-3e4095aaf6994b31ed49.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-avoid-dying-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-avoid-dying-mdx-f169d82f571c4b00bc46.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-big-life-questions-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-big-life-questions-mdx-46e76228653a30e9977c.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-common-hangups-with-determinism-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-common-hangups-with-determinism-mdx-0160a679e6cd459df6dc.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-consciousness-sam-harris-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-consciousness-sam-harris-mdx-e29233a5756a93c2561a.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-ea-community-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-ea-community-mdx-756e11955ddbe51dfe72.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-effect-of-meditation-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-effect-of-meditation-mdx-481f5850a9cb7e38b9d9.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-empathy-vs-compassion-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-empathy-vs-compassion-mdx-9af0cc43c5055f225c5d.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-flourishing-trees-vs-humans-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-flourishing-trees-vs-humans-mdx-25c6298ab9b92620b87d.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-leading-causes-of-death-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-leading-causes-of-death-mdx-dbc89784c819d4b40288.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-meals-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-meals-mdx-8a76dd759d07a75089b6.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-mission-statements-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-mission-statements-mdx-03904fe66ba71fadf938.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-my-message-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-my-message-mdx-860d56421d13cbbfcddb.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-norms-and-expectations-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-norms-and-expectations-mdx-f8bbf33a71422fc22dda.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-objectivity-battles-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-objectivity-battles-mdx-8d473acaab88ed539398.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-on-conscious-life-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-on-conscious-life-mdx-696529734a2e50d08a0c.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-optimistic-nihilism-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-optimistic-nihilism-mdx-5557f36fd752946242bd.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-overcoming-negativity-bias-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-overcoming-negativity-bias-mdx-b49ce872a6c2e537a79e.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-periodic-reflections-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-periodic-reflections-mdx-2ffb1b04706206ba6777.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-pity-party-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-pity-party-mdx-6be73534af58804881e7.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-self-centeredness-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-self-centeredness-mdx-fb602ffed20c1c103dde.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-sex-differences-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-sex-differences-mdx-8c466ee931ee4f5b23f0.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-skills-of-love-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-skills-of-love-mdx-e8a0a1fb3b0ee9cc4c60.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-support-methods-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-support-methods-mdx-17e1b894f96a05dcea65.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-tower-of-identification-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-tower-of-identification-mdx-cd6ec939e79e211113b0.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-values-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-values-mdx-e66a81d5f384c9c0c22a.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-what-does-the-world-need-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-what-does-the-world-need-mdx-df46d7caee58c0d124f5.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-what-other-people-think-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-what-other-people-think-mdx-965e7496862422d6f635.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-why-statement-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-why-statement-mdx-cb6cbcf96ba1299c6fe8.js\"],\"component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-yann-dall-aglio-on-love-mdx\":[\"/component---src-pages-mdx-frontmatter-slug-tsx-content-file-path-src-notes-yann-dall-aglio-on-love-mdx-58e8ef291c1b9ee642a4.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="273f8ea2be5edc530757";</script><script src="/notes/webpack-runtime-9890ffc9812b51ab1728.js" async></script><script src="/notes/framework-9292058bf9a07a247c3e.js" async></script><script src="/notes/app-a19d5715adff57d8d24c.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
